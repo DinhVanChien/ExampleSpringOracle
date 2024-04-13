@@ -1,0 +1,22 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/orcl
+    username: chiendv
+    password: Sa123456
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 10000
+      minimum-idle: 2
+      maximum-pool-size: 10
+      idle-timeout: 200000
+      max-lifetime: 1100000
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle12cDialect
+var:
+  timeDate: ${TIME_DATE:5}
+
