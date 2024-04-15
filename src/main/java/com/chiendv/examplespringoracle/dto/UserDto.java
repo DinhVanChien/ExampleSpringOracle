@@ -22,6 +22,9 @@ public class UserDto implements Cloneable {
     @JsonProperty("createDataTime")
     private Date createDataTime;
     private Date updateDate;
+
+    @JsonProperty("task")
+    private String task;
     public UserDto(){}
     public UserDto(String name, String phone, String groups) {
         this.name = name;
@@ -98,5 +101,13 @@ public class UserDto implements Cloneable {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public String getTask() {
+        return task;
+    }
+
+    public void setTask(String task) {
+        this.task = task;
     }
 }

@@ -99,4 +99,14 @@ public class UsersController {
         return usersService.findAllByDateTime();
     }
 
+    @GetMapping("/get-map")
+    public UserDto2 revert() {
+        UserDto userDto2 = new UserDto();
+        userDto2.setId(1l);
+        userDto2.setName("Chien");
+        userDto2.setPhone("0868866994");
+        userDto2.setTask("TASK-EN");
+        return modelMapper.map(userDto2, UserDto2.class);
+    }
+
 }

@@ -9,6 +9,10 @@ public class UserDto2 {
     private Long id;
     @JsonProperty("name")
     private String name;
+    @JsonProperty("taskVn")
+    private String taskVn;
+    @JsonProperty("task")
+    private String task;
     @JsonProperty("phone")
     private String phone;
     @JsonProperty("groups")
@@ -74,5 +78,21 @@ public class UserDto2 {
 
     public void setCreateDataTime(Date createDataTime) {
         this.createDataTime = createDataTime;
+    }
+
+    public String getTaskVn() {
+        return taskVn;
+    }
+
+    public void setTaskVn(String taskVn) {
+        this.taskVn = taskVn;
+    }
+
+    public String getTask() {
+        return task;
+    }
+
+    public void setTask(String task) {
+        this.task = task;
     }
 }
