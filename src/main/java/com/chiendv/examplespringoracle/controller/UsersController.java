@@ -107,6 +107,7 @@ public class UsersController {
         userDto2.setPhone("0868866994");
         userDto2.setTask("TASK-EN");
         userDto2.setCreateDataTime(new Date());
+        userDto2.setCreateDate(new Date());
         return modelMapper.map(userDto2, UserDto2.class);
     }
 
